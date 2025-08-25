@@ -1,0 +1,27 @@
+def schedule_meetings(meetings):
+    meetings.sort(key=lambda x: x['end'])
+    
+    schedule = []
+    last_end = 0
+    
+    for m in meetings:
+        if m['start'] >= last_end:
+            schedule.append(m['id'])
+            last_end = m['end']
+    
+    max_count = len(schedule)
+    return max_count, schedule
+
+
+meetings = [
+    {'id': 1, 'start': 1, 'end': 4},
+    {'id': 2, 'start': 3, 'end': 5},
+    {'id': 3, 'start': 0, 'end': 6},
+    {'id': 4, 'start': 5, 'end': 7},
+    {'id': 5, 'start': 8, 'end': 9},
+    {'id': 6, 'start': 5, 'end': 9}
+]
+
+maxCount, schedule = schedule_meetings(meetings)
+print("maxCount =", maxCount)
+print("schedule =", schedule)
