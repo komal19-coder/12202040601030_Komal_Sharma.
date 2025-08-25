@@ -1,0 +1,20 @@
+merged = [
+    {
+        "userID": 1,
+        "Name": "Sonali",
+        "DateOfBirth": "02-05-2004"
+    },
+    {
+        "userID": 2,
+        "Name": "Krish",
+        "DateOfBirth": "28-03-2005"
+    },
+    {
+        "userID": 3,
+        "Name":"Komal",
+        "DateOfBirth": "15-08-2024"
+    }
+]
+
+for item in merged:
+    print(item)
