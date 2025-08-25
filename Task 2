@@ -1,0 +1,11 @@
+a = [12, 16, 15, 14, 12, 24, 12, 13, 28]
+
+for i in range(0, len(a), 3):
+    
+    sub_array = a[i:i+3]
+    
+    max_value = max(sub_array)
+    
+    elements_str = ', '.join(str(num) for num in sub_array)
+    
+    print(f"{elements_str} -> {max_value}")
